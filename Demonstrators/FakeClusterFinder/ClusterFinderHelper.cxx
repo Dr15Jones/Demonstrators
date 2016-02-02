@@ -1,6 +1,6 @@
-#include "ClusterFinderHelper.h"
+#include "Demonstrators/FakeClusterFinder/ClusterFinderHelper.h"
 
-#include "ClusterFinderAlgorithm.h"
+#include "Demonstrators/FakeClusterFinder/ClusterFinderAlgorithm.h"
 #include "DataFormat/storage_manager.h"
 #include "DataFormat/wrapper.h"
 

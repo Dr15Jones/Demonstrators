@@ -1,4 +1,4 @@
-#include "ClusterFinderAlgorithm.h"
+#include "Demonstrators/FakeClusterFinder/ClusterFinderAlgorithm.h"
 
 #include "lardatalite/RecoBase/Hit.h"
 #include "lardatalite/RecoBase/Cluster.h"
