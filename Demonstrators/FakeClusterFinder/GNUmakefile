@@ -11,7 +11,7 @@ HEADERS = $(filter-out $(FMWK_HEADERS), $(wildcard *.h))
 OBJECTS = $(SOURCES:.cxx=.o)
 
 # include options for this package
-INCFLAGS = -I.                       #Include itself
+INCFLAGS = -I$(LARLITE_USERDEVDIR)/Demonstrators  #Include itself
 INCFLAGS += $(shell larlite-config --includes)
 INCFLAGS += -I$(LARDATALITE_INC)
 INCFLAGS += -I$(LARCORELITE_INC)

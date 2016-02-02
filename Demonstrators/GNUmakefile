@@ -20,7 +20,7 @@ endif
 #
 # Define directories to be compile upon a global "make"...
 #
-SUBDIRS := Demonstrators #ADD_NEW_SUBDIR ... do not remove this comment from this line
+SUBDIRS := FakeClusterFinder #ADD_NEW_SUBDIR ... do not remove this comment from this line
 
 #####################################################################################
 #
@@ -30,27 +30,13 @@ SUBDIRS := Demonstrators #ADD_NEW_SUBDIR ... do not remove this comment from thi
 .phony: all clean
 
 all:
-	@for i in $(SUBDIRS); do ( echo "" && echo "Compiling $$i..." && cd $(LARLITE_USERDEVDIR)/Demonstrators/$$i && $(MAKE) ) || exit $$?; done
+	@for i in $(SUBDIRS); do ( echo "" && echo "Compiling $$i..." && cd $(LARLITE_USERDEVDIR)/Demonstrators/Demonstrators/$$i && $(MAKE) ) || exit $$?; done
 #####################################################################################
 #
 # CLEANs...
 #
 clean:
-	@for i in $(SUBDIRS); do ( echo "" && echo "Cleaning $$i..." && cd $(LARLITE_USERDEVDIR)/Demonstrators/$$i && $(MAKE) clean && rm -f $(LARLITE_LIBDIR)/$$i.* ) || exit $$?; done
+	@for i in $(SUBDIRS); do ( echo "" && echo "Cleaning $$i..." && cd $(LARLITE_USERDEVDIR)/Demonstrators/Demonstrators/$$i && $(MAKE) clean && rm -f $(LARLITE_LIBDIR)/$$i.* ) || exit $$?; done
 
-#####################################################################################
-#
-# DOCUMENTATION...
-#
-doxygen:
-	@echo 'dOxygenising your code...'
-	@mkdir -p $(LARLITE_USERDEVDIR)/Demonstrators/doc/dOxygenMyProject
-	@doxygen $(LARLITE_USERDEVDIR)/Demonstrators/doc/doxygenMyProject.script
-
-doxygen+:
-	@echo 'dOxygenising MyProject + local-ROOT...'
-	@mkdir -p $(LARLITE_USERDEVDIR)/Demonstrators/doc/dOxygenMyProject+
-	@doxygen $(LARLITE_USERDEVDIR)/Demonstrators/doc/doxygenMyProject+.script
-#
 #####################################################################################
 #EOF
