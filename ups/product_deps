@@ -1,0 +1,21 @@
+parent Demonstrators v0_01_00
+defaultqual e9
+
+# define product/version pairs
+product	version
+lardatalite	v04_19_02p
+cetbuildtools	v4_18_02	-	only_for_build
+end_product_list
+
+# Matrix of qualifiers versus dependent products
+qualifier	lardatalite
+e9:debug	e9:debug
+e9:opt		e9:opt	
+e9:prof		e9:prof	
+end_qualifier_list
+
+# Local Variables:
+# tab-width: 8
+# End:
+
+# vi:set ts=8 noexpandtab:
