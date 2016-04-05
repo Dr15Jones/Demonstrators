@@ -3,7 +3,7 @@ defaultqual e9
 
 # define product/version pairs
 product	version
-lardatalite	v04_19_02p
+lardatalite	v1_00_00
 cetbuildtools	v4_18_02	-	only_for_build
 end_product_list
 
