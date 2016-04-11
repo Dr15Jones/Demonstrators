@@ -1,7 +1,7 @@
 #include "Demonstrators/FakeClusterFinder/ClusterFinderAlgorithm.h"
 
-#include "lardatalite/RecoBase/Hit.h"
-#include "lardatalite/RecoBase/Cluster.h"
+#include "lardataobj/RecoBase/Hit.h"
+#include "lardataobj/RecoBase/Cluster.h"
 
 namespace demonstrators {
 
