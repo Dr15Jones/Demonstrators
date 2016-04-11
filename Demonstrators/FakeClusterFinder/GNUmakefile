@@ -13,8 +13,8 @@ OBJECTS = $(SOURCES:.cxx=.o)
 # include options for this package
 INCFLAGS = -I$(LARLITE_USERDEVDIR)/Demonstrators  #Include itself
 INCFLAGS += $(shell larlite-config --includes)
-INCFLAGS += -I$(LARDATALITE_INC)
-INCFLAGS += -I$(LARCORELITE_INC)
+INCFLAGS += -I$(LARDATAOBJ_INC)
+INCFLAGS += -I$(LARCOREOBJ_INC)
 
 # platform-specific options
 OSNAME          = $(shell uname -s)
@@ -25,7 +25,7 @@ OSNAMEMODE      = $(OSNAME)
 CINTFLAGS += "-p"
 
 LDFLAGS += $(shell larlite-config --libs)
-LDFLAGS += -L$(LARDATALITE_LIB) -llardatalite_RecoBase
+LDFLAGS += -L$(LARDATAOBJ_LIB) -llardataobj_RecoBase
 
 include $(LARLITE_BASEDIR)/Makefile/Makefile.${OSNAME}
 
