@@ -1,5 +1,5 @@
 
-cet_make( LIBRARIES lardatalite_RecoBase )
+cet_make( LIBRARIES lardataobj_RecoBase )
 
 install_headers()
 

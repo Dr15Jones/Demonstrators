@@ -44,7 +44,7 @@ cet_report_compiler_flags()
 # Describe build prerequisites:
 
 
-find_ups_product (lardatalite)
+find_ups_product (lardataobj)
 find_ups_product (cetbuildtools)
 
 # ----------------------------------------------------------------------

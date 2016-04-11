@@ -3,12 +3,12 @@ defaultqual e9
 
 # define product/version pairs
 product	version
-lardatalite	v1_00_00
+lardataobj	v1_00_00
 cetbuildtools	v4_18_02	-	only_for_build
 end_product_list
 
 # Matrix of qualifiers versus dependent products
-qualifier	lardatalite
+qualifier	lardataobj
 e9:debug	e9:debug
 e9:opt		e9:opt	
 e9:prof		e9:prof	
