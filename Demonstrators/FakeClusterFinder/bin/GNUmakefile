@@ -4,8 +4,9 @@ CXXFLAGS += -I$(LARLITE_USERDEVDIR)/Demonstrators
 CXXFLAGS += -I. $(shell root-config --cflags) -g
 
 # Include your shared object lib location
-LDFLAGS += -L$(LARLITE_LIBDIR) -lDemonstrators_FakeClusterFinder
-LDFLAGS += $(shell root-config --libs) -g
+LDFLAGS += -lDemonstrators_FakeClusterFinder
+LDFLAGS += $(shell larlite-config --libs)
+LDFLAGS += $(shell root-config --libs)
 
 # platform-specific options
 OSNAME = $(shell uname -s)
@@ -19,7 +20,7 @@ all:		$(PROGRAMS)
 
 $(PROGRAMS):
 	@echo '<<compiling' $@'>>'
-	@$(CXX) $@.cc -o $@ $(CXXFLAGS) $(LDFLAGS)
+	$(CXX) $@.cc -o $@ $(CXXFLAGS) $(LDFLAGS)
 	@rm -rf *.dSYM
 clean:	
 	rm -f $(PROGRAMS)
